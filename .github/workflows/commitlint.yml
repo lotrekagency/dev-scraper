@@ -9,4 +9,5 @@ jobs:
           fetch-depth: 0
       - uses: actions/setup-node@v2.1.0
       - run: npm install @commitlint/cli
+      - run: npm i conventional-changelog-conventionalcommits
       - run: npx commitlint --from HEAD~${{ github.event.pull_request.commits }} --to HEAD
