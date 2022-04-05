@@ -3,12 +3,11 @@
         {
             "site" : "dev.to",
             "api_url" : "https://dev.to/api/articles",
-            "articles_number_each_tag" : 3,
+            "articles_number_each_tag" : 1,
             "latest" : "true",
             "tags" : [
                 "opensource",
-                "webdev",
-                "python"
+                "webdev"
             ]
         }
     ]

@@ -1,6 +1,8 @@
 import json
 import requests
 
+FILENAME_SAVED_ARTICLES = "saved_articles.json"
+
 def readFile(filename):
     """Read json file 
     
@@ -16,6 +18,10 @@ def readFile(filename):
         return json.load(f)
     except ValueError:
         return []
+
+def writeFile(filename, data):
+    with open(filename, "w") as jsonFile:
+        json.dump(data, jsonFile, indent = 4)
 
 def buildApiUrl(conf, tag):
     """Create the endpoint by the site conf
@@ -43,7 +49,7 @@ def initFile():
     Returns:
     string:file name
     """
-    filename = "saved_articles.json"
+    filename = FILENAME_SAVED_ARTICLES
     with open(filename, "w") as jsonFile:
         data = { 
             "articles" : [] 
@@ -63,14 +69,39 @@ def updateFile(articles, articles_number_each_tag, filename):
     Returns:
     """
     data = readFile(filename)
-    article_per_tag = 0
-    for article in articles:
-        if article not in data['articles'] and article_per_tag < articles_number_each_tag:
-            data["articles"].append(article)
-            article_per_tag += 1
 
-    with open(filename, "w") as jsonFile:
-        json.dump(data, jsonFile, indent = 4)
+    if len(data['articles']) <= 0:
+        i = 0 
+        for article in articles:
+            if i < articles_number_each_tag:
+                data['articles'].append({
+                    'title' : article['title'],
+                    'description' : article['description'],
+                    'url' : article['url'],
+                    'tag_list' : article['tag_list'],
+                    'issue_created' : 0
+
+                })
+                i += 1
+    else:
+        i = 0 
+        for article in articles:
+            duplicate = False
+            for saved in data['articles']:
+                if article['title'] == saved['title']:
+                    duplicate = True
+            if not duplicate and i < articles_number_each_tag:
+                data['articles'].append({
+                    'title' : article['title'],
+                    'description' : article['description'],
+                    'url' : article['url'],
+                    'tag_list' : article['tag_list'],
+                    'issue_created' : 0
+
+                })
+                i += 1
+
+    writeFile(filename, data)
 
 def findArticles(sites):
     """Find beautifull articles
@@ -80,7 +111,8 @@ def findArticles(sites):
 
     Returns: 
     """
-    filename = initFile()
+    filename = FILENAME_SAVED_ARTICLES
+    if len(readFile(filename)) <= 0: filename = initFile()
     for site in sites:
         for tag in site['tags']:
             articles = requests.get(buildApiUrl(site, tag)).json()
@@ -91,14 +123,18 @@ def createGitHubIssues():
     header = {
         "Content-type": "application/json",
         "Accept": "application/vnd.github.v3+json",
-        "Authorization" : "token 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"
+        "Authorization" : "token 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"
     } 
-    articles = readFile("saved_articles.json")
+    articles = readFile(FILENAME_SAVED_ARTICLES)
     for article in articles['articles']:
-        body = "---\nname: New article\nabout: Propose a new article to put in newsletter\ntitle:'["+ article['title'] +"] New article'\nlabels: 'article'\n---\n\n## Propose a new article\n\n### "+ article['title'] +"\n\nDescription: "+ article['description'] +"\n\nLink: "+ article['url']
-        payload = {
-            "title": article['title'],
-            "labels" : ["article"],
-            "body" : body
-        }
-        requests.post(url, data=json.dumps(payload), headers=header )
+        if article['issue_created'] == 0:
+            arr = [str(r) for r in article['tag_list']]
+            body = "## Propose a new article\n\n### "+ article['title'] +"\n\nDescription: "+ article['description'] +"\n\nLink: "+ article['url']+"\n\nTags: " + str(arr)
+            payload = {
+                "title": article['title'],
+                "labels" : ["article"],
+                "body" : body
+            }
+            requests.post(url, data=json.dumps(payload), headers=header)
+            article['issue_created'] = 1
+    writeFile(FILENAME_SAVED_ARTICLES, articles)
