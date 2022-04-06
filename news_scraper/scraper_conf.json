@@ -1,14 +1,25 @@
 {
     "sites_conf" : [
         {
-            "site" : "dev.to",
-            "api_url" : "https://dev.to/api/articles",
-            "articles_number_each_tag" : 1,
-            "latest" : "true",
-            "tags" : [
-                "opensource",
-                "webdev"
-            ]
+            "devto" : {
+                "api_url" : "https://dev.to/api/articles",
+                "articles_number_each_tag" : 1,
+                "latest" : "true",
+                "tags" : [
+                    "opensource",
+                    "webdev"
+                ]
+            }
+        },
+        {
+            "webdev" : {
+                "api_url" : "https://web.dev/tags/",
+                "articles_number_each_tag" : 1,
+                "tags" : [
+                    "css",
+                    "javascript"
+                ]
+            }
         }
     ]
 }

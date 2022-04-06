@@ -22,6 +22,306 @@
             ], 
             "description": "Python is one of the most elegant and clean programming languages, yet having a beautiful and clean...", 
             "title": "10 must-know patterns for writing clean code with Python\ud83d\udc0d"
+        }, 
+        {
+            "url": "https://dev.to/eludadev/take-your-github-repository-to-the-next-level-17ge", 
+            "issue_created": 0, 
+            "tag_list": [
+                "webdev", 
+                "beginners", 
+                "opensource", 
+                "css"
+            ], 
+            "description": "The secret sauce to creating a growing and preposterous project is a great README documentation. It...", 
+            "title": "Take Your Github Repository To The Next Level \ud83d\ude80\ufe0f"
+        }, 
+        {
+            "url": "https://dev.to/liveg/project-prism-on-the-road-to-building-an-open-smartphone-50lg", 
+            "issue_created": 0, 
+            "tag_list": [
+                "mobile", 
+                "pwa", 
+                "webdev", 
+                "a11y"
+            ], 
+            "description": "How we're building the PinePhone-based smartphone that has Progressive Web Apps at its core", 
+            "title": "Project Prism: on the road to building an open smartphone"
+        }, 
+        {
+            "url": "https://dev.to/pradumnasaraf/what-is-pull-request-pr-2b89", 
+            "issue_created": 0, 
+            "tag_list": [
+                "opensource", 
+                "git", 
+                "github"
+            ], 
+            "description": "Requesting your changes to get added into the original/main repo.  We made changes on Fork and then...", 
+            "title": "What is Pull Request (PR)?"
+        }, 
+        {
+            "url": "https://dev.to/matteobruni/tsparticles-1431-released-44p2", 
+            "issue_created": 0, 
+            "tag_list": [
+                "javascript", 
+                "showdev", 
+                "webdev", 
+                "typescript"
+            ], 
+            "description": "tsParticles 1.43.1 Changelog            Bug Fixes    Fixed twinkle updater, wrong id        ...", 
+            "title": "tsParticles 1.43.1 Released"
+        }, 
+        {
+            "url": "https://dev.to/onlyphantom/todo-gamification-with-taskwarrior-taskquant-3e38", 
+            "issue_created": 0, 
+            "tag_list": [
+                "productivity", 
+                "python", 
+                "opensource", 
+                "showdev"
+            ], 
+            "description": "If you live and breathe in the terminal, you want as little context switching as possible. For many...", 
+            "title": "Todo + gamification with Taskwarrior & Taskquant"
+        }, 
+        {
+            "url": "https://dev.to/code_jedi/15-creative-web-dev-project-ideas-for-your-portfolio-that-you-can-finish-in-a-weekend-3bi2", 
+            "issue_created": 0, 
+            "tag_list": [
+                "javascript", 
+                "webdev", 
+                "react", 
+                "beginners"
+            ], 
+            "description": "Are you tired of blogs telling you to make a to-do app, weather app or personal blog? They're great...", 
+            "title": "15 Creative Web Dev Project Ideas for Your Portfolio (That You Can Finish in a Weekend)"
+        }, 
+        {
+            "url": "https://dev.to/ekinnos/retto-system-devlog-1-1abd", 
+            "issue_created": 0, 
+            "tag_list": [
+                "python", 
+                "opensource"
+            ], 
+            "description": "Selamlar, devloga ho\u015fgeldiniz. Bu devlogda 2.0 s\u00fcr\u00fcm\u00fcn\u00fc \u00e7\u0131karaca\u011f\u0131m retto sisteminin temel ayarlar\u0131n\u0131...", 
+            "title": "Retto System - Devlog #1"
+        }, 
+        {
+            "url": "https://dev.to/sobhandash/how-to-become-phenomenal-in-just-3-months-4p67", 
+            "issue_created": 0, 
+            "tag_list": [
+                "career", 
+                "productivity", 
+                "discuss", 
+                "webdev"
+            ], 
+            "description": "Being Phenomenal is to live in the fast lane.  At least that's what I learned in the last 2...", 
+            "title": "How to become Phenomenal in just 3 months!"
+        }, 
+        {
+            "url": "https://dev.to/kanishka/closed-source-github-detox-ssearchsource-graph-2mnk", 
+            "issue_created": 0, 
+            "tag_list": [
+                "opensource"
+            ], 
+            "description": "GitHub is a closed source platform. Let's move towards open source platforms like gitlab and...", 
+            "title": "Closed source github detox - s/search/source graph/"
+        }, 
+        {
+            "url": "https://dev.to/duxtech/paracetamoljs-94-explica-este-codigo-javascript-40he", 
+            "issue_created": 0, 
+            "tag_list": [
+                "javascript", 
+                "beginners", 
+                "spanish", 
+                "webdev"
+            ], 
+            "description": "Explica este c\u00f3digo JavaScript      const a = NaN; const b = 5/\"Hola\";  console.log( a === b...", 
+            "title": "Paracetamol.js\ud83d\udc8a| #94: Explica este c\u00f3digo JavaScript"
+        }, 
+        {
+            "url": "https://dev.to/louis3797/next-level-github-readme-5dd2", 
+            "issue_created": 0, 
+            "tag_list": [
+                "readme", 
+                "github", 
+                "opensource", 
+                "showdev"
+            ], 
+            "description": "The readme file is often the first thing people see when they look at a repository. So it is...", 
+            "title": "Next Level Github Readme"
+        }, 
+        {
+            "url": "https://dev.to/lambdatest/a-complete-guide-for-your-first-testng-automation-script-5go4", 
+            "issue_created": 0, 
+            "tag_list": [
+                "webdev", 
+                "testng", 
+                "automation", 
+                "testing"
+            ], 
+            "description": "The love of Automation testers, TestNG, is a Java testing framework that can be used to drive...", 
+            "title": "A Complete Guide For Your First TestNG Automation Script"
+        }, 
+        {
+            "url": "https://dev.to/vidhitakher/istio-service-discovery-in-kubernetes-clusters-5c79", 
+            "issue_created": 0, 
+            "tag_list": [
+                "kubernetes", 
+                "microservices", 
+                "opensource", 
+                "programming"
+            ], 
+            "description": "When we deploy multiple microservices in a kubernetes  cluster, they  need to communicate with each...", 
+            "title": "Istio service discovery in Kubernetes clusters"
+        }, 
+        {
+            "url": "https://dev.to/kevincp17/i-want-a-challenge-573c", 
+            "issue_created": 0, 
+            "tag_list": [
+                "webdev"
+            ], 
+            "description": "Do you guys know a web project with medium difficult? I seriously want to push my skill beyond the...", 
+            "title": "I want a challenge"
+        }, 
+        {
+            "url": "https://dev.to/danglewood/how-to-navigate-in-the-openbb-terminal-jl2", 
+            "issue_created": 0, 
+            "tag_list": [
+                "opensource", 
+                "python", 
+                "showdev", 
+                "tutorial"
+            ], 
+            "description": "After a successful installation, it's a good idea to quickly review how to navigate through the...", 
+            "title": "How To Navigate In The OpenBB Terminal"
+        }, 
+        {
+            "url": "https://dev.to/thomasrooney/fixing-flaky-end-to-end-tests-with-playwright-and-reflowio-116e", 
+            "issue_created": 0, 
+            "tag_list": [
+                "playwright", 
+                "testing", 
+                "tooling", 
+                "webdev"
+            ], 
+            "description": "End-to-end testing is a Quality Assurance technique that involves exercising and validating an...", 
+            "title": "Fixing flaky end-to-end tests with Playwright and Reflow.io"
+        }, 
+        {
+            "url": "https://dev.to/rogernperkin/network-automation-is-here-to-stay-13d9", 
+            "issue_created": 0, 
+            "tag_list": [
+                "python", 
+                "ansible", 
+                "devops", 
+                "opensource"
+            ], 
+            "description": "I have been working with Network Automation for many years now, starting with Ansible and now using...", 
+            "title": "Network Automation is here to stay"
+        }, 
+        {
+            "url": "https://dev.to/realnerdethan/software-dev-weekly-update-10-functions-functions-and-more-functions-52bn", 
+            "issue_created": 0, 
+            "tag_list": [
+                "javascript", 
+                "beginners", 
+                "webdev"
+            ], 
+            "description": "This week was all about functions! I hope you have some coffee (or tea) in hand, there's a lot to...", 
+            "title": "Software Dev Weekly Update #10: Functions, functions, and more functions..."
+        }, 
+        {
+            "url": "https://dev.to/mte90/the-2022-rplace-story-from-the-italian-view-and-from-bots-1j4a", 
+            "issue_created": 0, 
+            "tag_list": [
+                "opensource", 
+                "reddit", 
+                "python"
+            ], 
+            "description": "The story seen by one of the team, with a stiff neck and little sleep.  The post The 2022 r/place...", 
+            "title": "The 2022 r/place story from the Italian view (and from bots)"
+        }, 
+        {
+            "url": "https://dev.to/twankrui/building-a-business-from-scratch-day-15-h6o", 
+            "issue_created": 0, 
+            "tag_list": [
+                "javascript", 
+                "webdev", 
+                "react", 
+                "nextjs"
+            ], 
+            "description": "Welcome to day fifteen of the\u00a0useaffiliates.com\u00a0build log! This series covers my journey of building...", 
+            "title": "Building a business from scratch - day 15"
+        }, 
+        {
+            "url": "https://dev.to/pradumnasaraf/what-is-an-open-source-contribution-2g3k", 
+            "issue_created": 0, 
+            "tag_list": [
+                "opensource", 
+                "git", 
+                "github"
+            ], 
+            "description": "\u25aa\ufe0f Open Source contribution is giving back to the communities, by improving the projects by making...", 
+            "title": "What is an Open Source contribution?"
+        }, 
+        {
+            "url": "https://dev.to/rohiturane/integrate-sendgrid-email-tool-in-laravel-1fm9", 
+            "issue_created": 0, 
+            "tag_list": [
+                "webdev", 
+                "laravel", 
+                "integration", 
+                "sendgrid"
+            ], 
+            "description": "SendGrid sends email in two ways:- SMTP relay and Web API. SendGrid provides client libraries in...", 
+            "title": "Integrate SendGrid Email tool in laravel"
+        }, 
+        {
+            "url": "https://dev.to/eprbell/rp2-the-privacy-focused-free-open-source-us-crypto-tax-calculator-is-growing-fast-1a3g", 
+            "issue_created": 0, 
+            "tag_list": [
+                "crypto", 
+                "tax", 
+                "bitcoin", 
+                "opensource"
+            ], 
+            "description": "RP2 and its sister data loader project DaLI are receiving more and more user engagement on Github, in...", 
+            "title": "RP2, the Privacy-focused, Free, Open-source US Crypto Tax Calculator, Is Growing Fast"
+        }, 
+        {
+            "url": "https://dev.to/diballesteros/say-goodbye-to-yarn-and-say-hello-to-pnpm-5ehn", 
+            "issue_created": 0, 
+            "tag_list": [
+                "webdev", 
+                "pnpm", 
+                "frontenddevelopment", 
+                "programming"
+            ], 
+            "description": "Introduction   PNPM is a package manager that I have seen floating around for quite some...", 
+            "title": "Say goodbye to Yarn and say hello to PNPM"
+        }, 
+        {
+            "url": "https://dev.to/seaql/introducing-starfishql-visualizing-the-dependency-network-on-cratesio-37c9", 
+            "issue_created": 0, 
+            "tag_list": [
+                "rust", 
+                "githunt", 
+                "opensource", 
+                "showdev"
+            ], 
+            "description": "Introducing StarfishQL (sea-ql.org)  We are pleased to introduce StarfishQL to the Rust community...", 
+            "title": "Introducing StarfishQL - visualizing the dependency network on crates.io"
+        }, 
+        {
+            "url": "https://dev.to/mankins/what-if-a-reward-system-was-built-into-the-web-1mad", 
+            "issue_created": 0, 
+            "tag_list": [
+                "monetization", 
+                "architecture", 
+                "kudos", 
+                "webdev"
+            ], 
+            "description": "Part III in an overview of a study in alternative business models for the web. Part I in an overview...", 
+            "title": "What If a Reward System was Built Into the\u00a0Web?"
         }
     ]
 }

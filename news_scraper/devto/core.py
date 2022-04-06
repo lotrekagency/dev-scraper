@@ -3,6 +3,15 @@ import requests
 
 FILENAME_SAVED_ARTICLES = "saved_articles.json"
 
+def startScraping():
+    scraper_conf_data = readFile('scraper_conf.json')  
+    for a in scraper_conf_data['sites_conf']:
+        if "devto" in a.keys():
+            conf = a
+            break
+    findArticles(conf['devto'])
+    # createGitHubIssues()
+
 def readFile(filename):
     """Read json file 
     
@@ -37,6 +46,7 @@ def buildApiUrl(conf, tag):
     if conf['latest'] == 'true':
         build_url += "/latest"
     build_url += "?tag=" + tag
+    print(build_url)
     return build_url
     
 
@@ -103,7 +113,7 @@ def updateFile(articles, articles_number_each_tag, filename):
 
     writeFile(filename, data)
 
-def findArticles(sites):
+def findArticles(conf):
     """Find beautifull articles
 
     Parameters: 
@@ -113,10 +123,10 @@ def findArticles(sites):
     """
     filename = FILENAME_SAVED_ARTICLES
     if len(readFile(filename)) <= 0: filename = initFile()
-    for site in sites:
-        for tag in site['tags']:
-            articles = requests.get(buildApiUrl(site, tag)).json()
-            updateFile(articles, site['articles_number_each_tag'], filename)
+    for tag in conf['tags']:
+        print(tag)
+        articles = requests.get(buildApiUrl(conf, tag)).json()
+        updateFile(articles, conf['articles_number_each_tag'], filename)
 
 def createGitHubIssues():
     url = "https://api.github.com/repos/lotrekagency/dev-scraper/issues"
