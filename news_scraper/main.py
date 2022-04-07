@@ -1,8 +1,12 @@
+# import stuff
 import json
 from os import walk
-from subprocess import call
+
+# import module
 from webdev.core import ScraperWebDev
 from devto.core import ScraperDevTo
+from conf.settings import SCRAPER_CONF_FILE
+
 
 def readFile(filename):
     """Read json file 
@@ -23,7 +27,7 @@ def readFile(filename):
 mypath = "."
 directories = next(walk(mypath), (None, [], None))[1]  # [] if no file
 
-scraper_conf_data = readFile('scraper_conf.json')  
+scraper_conf_data = readFile(SCRAPER_CONF_FILE)  
 for scraper_conf in scraper_conf_data['sites_conf']:
     site_name = list(scraper_conf.keys())[0]
     if site_name in directories:

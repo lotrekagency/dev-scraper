@@ -1,11 +1,11 @@
-import requests
-from interface.scraper_interface import ScraperInterface
+# import stuff
 from bs4 import BeautifulSoup
+import requests
 import re
 
-# as per recommendation from @freylis, compile once only
-CLEANR = re.compile('<.*?>') 
-FILENAME_SAVED_ARTICLES = "saved_articles.json"
+# import modules
+from interface.scraper_interface import ScraperInterface
+from conf.settings import CLEANR, FILENAME_SAVED_ARTICLES
  
 class ScraperWebDev(ScraperInterface):
  
@@ -48,7 +48,5 @@ class ScraperWebDev(ScraperInterface):
                     'issue_created': 0,
                 } for a in self.articles
             ]
-            print(self.articles_dicts)
-            print(len(self.articles_dicts))
             self.updateFile(self.articles_dicts, self.articles_number_each_tag, FILENAME_SAVED_ARTICLES)
  

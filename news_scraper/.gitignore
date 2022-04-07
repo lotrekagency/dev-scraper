@@ -1,1 +1,2 @@
 *.pyc
+news_scraper/conf/local_settings.py

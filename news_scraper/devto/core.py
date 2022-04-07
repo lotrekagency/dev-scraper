@@ -1,12 +1,10 @@
+# import stuff
 import requests
-from interface.scraper_interface import ScraperInterface
-from bs4 import BeautifulSoup
-import re
 
-# as per recommendation from @freylis, compile once only
-CLEANR = re.compile('<.*?>') 
-FILENAME_SAVED_ARTICLES = "saved_articles.json"
- 
+# import modules
+from interface.scraper_interface import ScraperInterface
+from conf.settings import FILENAME_SAVED_ARTICLES
+
 class ScraperDevTo(ScraperInterface):
  
     def __init__(self, site_conf):
@@ -15,13 +13,12 @@ class ScraperDevTo(ScraperInterface):
         self.url = site_conf['api_url']
         self.articles_number_each_tag = site_conf['articles_number_each_tag']
         self.findArticles()
-        self.createGitHubIssues()
+        # self.createGitHubIssues()
 
     def buildApiUrl(self, tag):
         """Create the endpoint by the site conf
 
         Parameters:
-        conf (dict): the site configuration
         tag: (string): articles tag
 
         Returns:
@@ -29,7 +26,9 @@ class ScraperDevTo(ScraperInterface):
         """
         return self.url + "?tag=" + tag
 
-    def findArticles(self):   
+    def findArticles(self): 
+        """Find beautifull articles, and save them into a json file
+        """  
         filename = FILENAME_SAVED_ARTICLES
         if len(self.readFile(filename)) <= 0: filename = self.initFile()
         for tag in self.tags:

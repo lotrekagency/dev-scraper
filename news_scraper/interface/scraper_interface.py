@@ -1,21 +1,16 @@
+# import stuff
 import json
 import requests
 
-FILENAME_SAVED_ARTICLES = "saved_articles.json"
+# import modules
+from conf.settings import FILENAME_SAVED_ARTICLES, TOKEN_GITHUB
 
 class ScraperInterface:
 
-    def buildApiUrl():
+    def buildApiUrl(self):
         pass
 
     def findArticles(self):
-        """Find beautifull articles
-
-        Parameters: 
-        sites (dict): the configuration for each site to scrape
-
-        Returns: 
-        """
         pass
 
     def readFile(self, filename):
@@ -105,7 +100,7 @@ class ScraperInterface:
         header = {
             "Content-type": "application/json",
             "Accept": "application/vnd.github.v3+json",
-            "Authorization" : "token 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"
+            "Authorization" : "token " + TOKEN_GITHUB
         } 
         articles = self.readFile(FILENAME_SAVED_ARTICLES)
         for article in articles['articles']:
