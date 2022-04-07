@@ -1,6 +1,8 @@
 # import stuff
 import json
 import requests
+import json
+from os import walk
 
 # import modules
 from conf.settings import FILENAME_SAVED_ARTICLES, TOKEN_GITHUB
@@ -61,7 +63,6 @@ class ScraperInterface:
         Returns:
         """
         data = self.readFile(filename)
-        print(data)
         if len(data['articles']) <= 0:
             i = 0 
             for article in articles:
@@ -106,7 +107,6 @@ class ScraperInterface:
         for article in articles['articles']:
             if article['issue_created'] == 0:
                 arr = [str(r) for r in article['tag_list']]
-                print(article['title'])
                 body = "## Propose a new article\n\n### "+ article['title'] +"\n\nDescription: "+ article['description'] +"\n\nLink: "+ article['url']+"\n\nTags: " + str(arr)
                 payload = {
                     "title": article['title'],

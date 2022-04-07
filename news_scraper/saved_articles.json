@@ -34,7 +34,7 @@
         },
         {
             "title": "Using the HTML5 Drag and Drop API",
-            "description": "The HTML5 Drag and Drop (DnD) API means that we can make almost any element on our page draggable",
+            "description": "The HTML5 Drag and Drop API means that we can make almost any element on our page draggable",
             "url": "https://web.dev/drag-and-drop/",
             "tag_list": [
                 "javascript"
